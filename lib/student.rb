@@ -60,7 +60,7 @@ def save
   def self.find_by_name(name)
       sql = "SELECT * FROM students WHERE name = ?"
       result = DB[:conn].execute(sql, name)[0]
-      Student.new(result[0], result[1], result[2])
+      Student.new(result[0], result[1], result[2]) #question on what the zero is doing on the line above and why we are doing this on this line (line 63)?
     end
   
   
